@@ -1,0 +1,93 @@
+@import 'variables';
+
+.slider__images {
+	position: relative;
+    width: 1120px;
+    height: 702px;
+
+    @media screen and (max-width: 425px) {
+        width: 100%;
+        height: 250px;
+    }
+}
+
+.image {
+	background-size: cover;
+	background-position: center center;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+	transition: opacity .7s linear;
+
+    &.active, .slider__images {
+        opacity: 1;
+    } 
+}
+
+.slider__dots {
+	display: flex;
+    justify-content: center;
+	gap: 15px;
+    margin-top: 15px;
+
+    .dot {
+        cursor: pointer;
+        background-color: #EFEEF6;
+        border-radius: 30px;
+        height: 12px;
+        width: 12px;
+    
+        &:hover, &.active {
+            background-color:#9E98DC;
+        }
+    }
+}
+.promo-stikers {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -650px;
+    margin-bottom: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.sticker__first {
+    @include promo-stiker();
+    position: absolute;
+    top: 82px;
+    right: -87px;
+    width: 149px;
+    height: 204px;
+    background-color: #9e98dc;
+    z-index: 2;
+    
+    @media screen and (max-width: 425px) {
+        display: none;
+    }
+}
+
+.sticker__second {
+    @include promo-stiker();
+    margin-top: 298px;
+    width: 137px;
+    height: 273px;
+    background-color: #ff8fe6;
+
+    @media screen and (max-width: 425px) {
+        display: none;
+    }
+}
+
+.sticker__text {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $base-black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.sticker__svg {
+    width: 57px;
+    height: 14px;
+}

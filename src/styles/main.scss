@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap');
+
+@import './components/variables.scss';
+@import './components/header.scss';
+@import './components/slider.scss';
+@import './components/books.scss';
+@import './components/burger-menu.scss';
+
+/*------------------------------------------------------*/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+button, .sticker__first, .sticker__second, .book-card {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    position: relative;
+
+    @media screen and (max-width: 425px) {
+        max-width: 350px;
+    }
+}
+
+button {
+    background-color: transparent;
+}
+
+.load-more {
+    margin-top: 95px;
+    display: flex;
+    justify-content: center;
+
+    &-button {
+        @include button();
+
+        &:hover {
+            @include button-hover();
+        }
+    }
+
+    @media screen and (max-width: 425px) {
+        margin-top: 50px;
+    }
+}
+

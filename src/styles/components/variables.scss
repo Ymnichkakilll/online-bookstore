@@ -1,0 +1,40 @@
+$base-gray: #5C6A79;
+$base-black: #1C2A39;
+$button: #4C3DB2;
+$button-active: #EEEDF5;
+$sidebar-base: #EFEEF6;
+$base-red: #FF353A;
+
+@mixin promo-stiker {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+    padding: 15px 15px;
+    box-shadow: 0px 24px 36px 0px rgba(53, 49, 84, 0.28);
+}
+
+@mixin button {
+    border: 1px solid $button;
+    text-transform: uppercase;
+    color: $button;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 15px 75px;
+}
+
+@mixin button-hover {
+    -webkit-box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+@mixin line-clamp {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+}
